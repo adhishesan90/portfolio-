@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Adhishesan.S - AI Full Stack Developer & Data Analytics Student. Specializing in neural networks, web development, and interactive data insights.">
+    <title>Adhishesan.S | AI Full Stack Developer & Data Analyst</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="gradient-text">Adhishesan.S</span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#strengths" class="nav-link">Strengths</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Interactive Canvas Background -->
+        <canvas id="particle-canvas"></canvas>
+
+        <div class="hero-content">
+            <div class="hero-badge reveal-fade">
+                <span class="pulse-dot"></span> Available for Projects
+            </div>
+            <h1 class="hero-title reveal-fade">
+                Hi, I'm <span class="gradient-text glow-effect">Adhishesan.S</span>
+            </h1>
+            <p class="hero-subtitle reveal-fade">
+                I am a <span id="typing-text" class="accent-text"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-description reveal-fade">
+                Specializing in AI Full Stack Development and Data Analytics. Bridging the gap between intelligent
+                models and interactive, full-scale web applications.
+            </p>
+            <div class="hero-cta reveal-fade">
+                <a href="#projects" class="btn btn-primary btn-glow">
+                    <span>View Projects</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Contact Me</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-fade">
+                <span class="section-subtitle">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text-card reveal-left">
+                    <p class="about-lead">
+                        Hardworking and technologically adept student focused on AI Full Stack Development and Data
+                        Analytics.
+                    </p>
+                    <p class="about-body">
+                        I am highly passionate about innovation, state-of-the-art AI frameworks, and engineering
+                        intelligent end-to-end applications. By combining the powers of front-end responsiveness, robust
+                        back-end APIs, and advanced analytics, I aim to create data-driven systems that deliver
+                        actionable insights and automate complex workflows.
+                    </p>
+                    <div class="about-quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-num gradient-text">AI</span>
+                            <span class="stat-label">Model Design</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num gradient-text">Web</span>
+                            <span class="stat-label">Full Stack</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num gradient-text">Data</span>
+                            <span class="stat-label">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual-card reveal-right">
+                    <div class="visual-box">
+                        <div class="code-header">
+                            <div class="code-dot red"></div>
+                            <div class="code-dot yellow"></div>
+                            <div class="code-dot green"></div>
+                            <span class="code-title">adhishesan.json</span>
+                        </div>
+                        <pre class="code-snippet"><code>{
+  <span class="key">"name"</span>: <span class="val">"Adhishesan.S"</span>,
+  <span class="key">"role"</span>: <span class="val">"AI Full Stack Developer"</span>,
+  <span class="key">"interests"</span>: [
+    <span class="val">"Neural Networks"</span>,
+    <span class="val">"Advanced Analytics"</span>,
+    <span class="val">"Cloud Integration"</span>
+  ],
+  <span class="key">"loc"</span>: <span class="val">"Salem, Tamil Nadu, India"</span>,
+  <span class="key">"status"</span>: <span class="val">"Actively Learning & Building"</span>
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-fade">
+                <span class="section-subtitle">My Toolbox</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-category reveal-fade">
+                    <div class="category-header">
+                        <i data-lucide="brain-circuit" class="category-icon purple"></i>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Neural Networks</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>AI & ML Development</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Model Implementation</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-category reveal-fade">
+                    <div class="category-header">
+                        <i data-lucide="code-2" class="category-icon blue"></i>
+                        <h3>Full Stack Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>End-to-End Web Development</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>AI API Integration</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Database Management</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-category reveal-fade">
+                    <div class="category-header">
+                        <i data-lucide="bar-chart-3" class="category-icon orange"></i>
+                        <h3>Data Intelligence</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Power BI Dashboarding</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Data Visualization</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Advanced Analytics</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="skill-category reveal-fade">
+                    <div class="category-header">
+                        <i data-lucide="zap" class="category-icon cyan"></i>
+                        <h3>Core Strengths</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Problem Solving</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Rapid Learning</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Process Optimization</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Technical Adaptability</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-fade">
+                <span class="section-subtitle">Verified Accomplishments</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="certifications-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card reveal-fade">
+                    <div class="cert-glow"></div>
+                    <div class="cert-icon-box">
+                        <i data-lucide="award" class="cert-icon"></i>
+                    </div>
+                    <h3>AI Full Stack Development</h3>
+                    <p class="cert-org">Professional Credential</p>
+                    <p class="cert-desc">Training program covering end-to-end building and integration of neural network
+                        APIs within modern web ecosystems.</p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card reveal-fade">
+                    <div class="cert-glow"></div>
+                    <div class="cert-icon-box">
+                        <i data-lucide="cpu" class="cert-icon"></i>
+                    </div>
+                    <h3>AI & ML Developer</h3>
+                    <p class="cert-org">Specialization</p>
+                    <p class="cert-desc">Focuses on deep learning model implementation, feature optimization, and
+                        deployment of machine learning algorithms.</p>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card reveal-fade">
+                    <div class="cert-glow"></div>
+                    <div class="cert-icon-box">
+                        <i data-lucide="pie-chart" class="cert-icon"></i>
+                    </div>
+                    <h3>Power BI Data Analytics</h3>
+                    <p class="cert-org">Data Intelligence</p>
+                    <p class="cert-desc">Focuses on data ingestion, modeling, interactive report layout dashboard
+                        design, and enterprise-grade advanced visualizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects Section -->
+    <section id="projects" class="projects-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-fade">
+                <span class="section-subtitle">My Creative Work</span>
+                <h2 class="section-title">Key Projects</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal-left">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <div class="project-image-placeholder proj-1-bg">
+                                <div class="project-icon-box">
+                                    <i data-lucide="layers" class="project-icon"></i>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-name">AI-Driven Full Stack Application</h3>
+                                <p class="project-short-desc">Functional web application integrating advanced AI-driven
+                                    features with a sleek responsive front-end and solid back-end logic.</p>
+                                <div class="project-tags">
+                                    <span>Full Stack</span>
+                                    <span>AI</span>
+                                    <span>Web Development</span>
+                                </div>
+                                <span class="reveal-hint">Hover to explore <i data-lucide="chevron-right"
+                                        class="hint-arrow"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card-back">
+                            <div class="back-content">
+                                <h3>AI-Driven Web App</h3>
+                                <div class="back-line"></div>
+                                <ul class="project-highlights">
+                                    <li>Implemented dynamic neural model querying via API endpoints</li>
+                                    <li>Optimized application state and local caching for sub-100ms response times</li>
+                                    <li>Designed responsive UX with secure user authentication and dashboard controls
+                                    </li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#contact" class="btn btn-primary btn-sm">Enquire Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal-right">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <div class="project-image-placeholder proj-2-bg">
+                                <div class="project-icon-box">
+                                    <i data-lucide="presentation" class="project-icon"></i>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-name">Data Visualization Portfolio</h3>
+                                <p class="project-short-desc">Interactive dashboard architecture turning raw corporate
+                                    metrics into actionable visual intelligence for business decision-making.</p>
+                                <div class="project-tags">
+                                    <span>Power BI</span>
+                                    <span>Data Analytics</span>
+                                    <span>Dashboard</span>
+                                </div>
+                                <span class="reveal-hint">Hover to explore <i data-lucide="chevron-right"
+                                        class="hint-arrow"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-card-back">
+                            <div class="back-content">
+                                <h3>Data Analytics Portfolio</h3>
+                                <div class="back-line"></div>
+                                <ul class="project-highlights">
+                                    <li>Aggregated and transformed complex datasets using Power Query & DAX formulas
+                                    </li>
+                                    <li>Created intuitive sales and metrics tracking dashboards featuring dynamic
+                                        drill-throughs</li>
+                                    <li>Provided layout frameworks prioritizing readability, story-telling, and metric
+                                        context</li>
+                                </ul>
+                                <div class="project-links">
+                                    <a href="#contact" class="btn btn-primary btn-sm">Enquire Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-fade">
+                <span class="section-subtitle">Academic Journey</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - 2028 (Expected)</div>
+                        <h3 class="timeline-title">B.tech. @ AVS Engineering College, Salem</h3>
+                        <p class="timeline-institution">AVS Engineering College, Salem</p>
+                        <p class="timeline-desc">Specializing in AI Full Stack Development concepts, data structure
+                            theory, intelligence frameworks, and advanced analytics systems.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Completed Secondary / HSC</div>
+                        <h3 class="timeline-title">Higher Secondary Education</h3>
+                        <p class="timeline-institution">Golden Spark Matric Hr. Sec. School, Salem</p>
+                        <p class="timeline-desc">Strong mathematical and scientific foundation with a focus on computer
+                            science and core analytical skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section id="strengths" class="strengths-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-fade">
+                <span class="section-subtitle">My Personality Drivers</span>
+                <h2 class="section-title">Strengths</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="strengths-grid">
+                <!-- Strength 1 -->
+                <div class="strength-card reveal-fade">
+                    <div class="strength-icon-container">
+                        <i data-lucide="compass" class="strength-icon"></i>
+                    </div>
+                    <h3>Motivation</h3>
+                    <p>Self-driven, highly proactive, and constantly looking for opportunities to grow. Passionate about
+                        keeping pace with rapidly shifting paradigms in artificial intelligence and machine learning.
+                    </p>
+                </div>
+
+                <!-- Strength 2 -->
+                <div class="strength-card reveal-fade">
+                    <div class="strength-icon-container">
+                        <i data-lucide="smile" class="strength-icon"></i>
+                    </div>
+                    <h3>Positive Attitude</h3>
+                    <p>Approach every challenge with a solution-oriented mindset. I believe failures are feedback loops
+                        and obstacles are opportunities to iterate, adapt, and build smarter systems.</p>
+                </div>
+
+                <!-- Strength 3 -->
+                <div class="strength-card reveal-fade">
+                    <div class="strength-icon-container">
+                        <i data-lucide="users" class="strength-icon"></i>
+                    </div>
+                    <h3>Communication</h3>
+                    <p>Excel at technical presentation, translating deep data trends and AI structures for diverse
+                        audiences, and working collaboratively in multidisciplinary environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-fade">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Contact Info Panel -->
+                <div class="contact-info-panel reveal-left">
+                    <h3>Let's collaborate on something great.</h3>
+                    <p class="panel-desc">Have an upcoming project, data analysis challenge, or simply want to connect?
+                        Reach out via the channels below or fill in the direct messaging form.</p>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon-box">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Email Me</span>
+                                <a href="mailto:adhishesan90@gmail.com">adhishesan90@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon-box">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Call Me</span>
+                                <a href="tel:+916381246119">+91 6381246119</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon-box">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="info-text">
+                                <span>Location</span>
+                                <p>Salem, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/adhishesan-s-633436338" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary btn-linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-linkedin">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Panel -->
+                <div class="contact-form-panel reveal-right">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Hi Adhishesan, I'd love to chat about..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-glow">
+                            <span>Send Message</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                    <div id="form-feedback" class="form-feedback-card hidden">
+                        <div class="feedback-icon-box">
+                            <i data-lucide="check-circle" class="success-icon"></i>
+                        </div>
+                        <h3>Thank you!</h3>
+                        <p>Your message has been sent successfully. Adhishesan will reach out to you shortly.</p>
+                        <button id="reset-form-btn" class="btn btn-secondary btn-sm">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Adhishesan.S. All rights reserved.</p>
+            <p class="footer-tagline">Designed with <i data-lucide="heart" class="heart-icon"></i> for AI & Data
+                analytics excellence.</p>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
