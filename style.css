@@ -313,6 +313,19 @@ button {
     border-color: transparent;
 }
 
+.btn-github {
+    background: #24292e;
+    color: white;
+    border: none;
+}
+
+.btn-github:hover {
+    background: #1a1e22;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
 .btn-outline-info {
     background: rgba(255, 255, 255, 0.03);
     color: var(--text-primary);
