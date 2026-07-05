@@ -313,6 +313,24 @@ button {
     border-color: transparent;
 }
 
+.btn-outline-info {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    border: 1.5px solid var(--primary);
+}
+
+.btn-outline-info:hover {
+    background: rgba(0, 242, 254, 0.08);
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2), var(--glow-shadow);
+}
+
+.mt-3 {
+    margin-top: 16px;
+}
+
 /* ==========================================
    Header & Navigation
    ========================================== */
