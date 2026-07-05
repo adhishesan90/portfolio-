@@ -801,6 +801,8 @@ button {
     box-shadow: var(--card-shadow);
     transition: var(--transition-normal);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .cert-glow {
@@ -867,6 +869,29 @@ button {
 .cert-desc {
     font-size: 0.9rem;
     color: var(--text-secondary);
+}
+
+.cert-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 16px;
+    margin-top: 24px;
+    margin-top: auto;
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition-normal);
+    box-sizing: border-box;
+}
+
+.cert-btn:hover {
+    background: var(--primary);
+    color: var(--bg-darker);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
 }
 
 /* ==========================================
