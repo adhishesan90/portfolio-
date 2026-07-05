@@ -301,6 +301,10 @@ button {
     background: #0077b5;
     border: none;
     color: white;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border-radius: 50%;
 }
 
 .btn-linkedin:hover {
