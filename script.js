@@ -333,8 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function animateSkillBars() {
         const skillFills = document.querySelectorAll('.skill-bar-fill');
         skillFills.forEach(fill => {
-            // Retrigger transition by reapplying width
-            const targetWidth = fill.style.width;
+            const targetWidth = fill.getAttribute('data-width') || fill.style.width;
             fill.style.width = '0';
             setTimeout(() => {
                 fill.style.width = targetWidth;
