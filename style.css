@@ -1,6 +1,6 @@
-/* ==========================================
+/* (empty)(empty)(empty)(empty)(empty)(empty)
    CSS Variables & Design Tokens
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
 :root {
     /* Colors */
     --bg-darker: #04060c;
@@ -37,9 +37,9 @@
     --glass-blur: blur(12px);
 }
 
-/* ==========================================
+/* (empty)(empty)(empty)(empty)(empty)(empty)
    Global Reset & Base Styles
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
 *,
 *::before,
 *::after {
@@ -153,9 +153,9 @@ button {
     background: var(--gradient-primary);
 }
 
-/* ==========================================
+/* (empty)(empty)(empty)(empty)(empty)(empty)
    Reusable UI Elements & Utility Classes
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
 .section-padding {
     padding: 100px 0;
 }
@@ -307,11 +307,11 @@ button {
     background: #0077b5;
     border: none;
     color: white;
-    <<<<<<< HEAD width: 48px;
+    (empty) width: 48px;
     height: 48px;
     padding: 0;
     border-radius: 50%;
-    =======(leave empty)
+    (empty)(leave empty)
 }
 
 .btn-linkedin:hover {
@@ -320,7 +320,7 @@ button {
     border-color: transparent;
 }
 
-<<<<<<< HEAD .btn-github {
+(empty) .btn-github {
     background: #24292e;
     color: white;
     border: none;
@@ -351,11 +351,11 @@ button {
     margin-top: 16px;
 }
 
-=======(leave empty)
+(empty)(leave empty)
 
-/* ==========================================
+/* (empty)(empty)(empty)(empty)(empty)(empty)
    Header & Navigation
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
 .header {
     position: fixed;
     top: 0;
@@ -435,9 +435,9 @@ button {
     font-size: 1.5rem;
 }
 
-/* ==========================================
+/* (empty)(empty)(empty)(empty)(empty)(empty)
    Hero Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -458,7 +458,7 @@ button {
     pointer-events: none;
 }
 
-<<<<<<< HEAD .hero-container {
+(empty) .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -502,7 +502,7 @@ button {
     transform: scale(1.03);
     box-shadow: 0 0 35px rgba(0, 212, 255, 0.7), 0 0 60px rgba(0, 212, 255, 0.4);
 
-    =======.hero-content {
+    (empty).hero-content {
         position: relative;
         z-index: 2;
         text-align: center;
@@ -594,16 +594,16 @@ button {
         font-size: 1.1rem;
         color: var(--text-secondary);
         max-width: 600px;
-        <<<<<<< HEAD margin: 0 0 40px;
-        =======margin: 0 auto 40px;
+        (empty) margin: 0 0 40px;
+        (empty)margin: 0 auto 40px;
         (leave empty)
     }
 
     .hero-cta {
         display: flex;
         gap: 16px;
-        <<<<<<< HEAD justify-content: flex-start;
-        =======justify-content: center;
+        (empty) justify-content: flex-start;
+        (empty)justify-content: center;
     }
 
     .scroll-indicator {
@@ -656,9 +656,9 @@ button {
         (leave empty)
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    About Me Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .about-content {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
@@ -811,13 +811,13 @@ button {
         /* Soft Terracotta String Value */
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Technical Skills Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .skills-grid {
         display: grid;
-        <<<<<<< HEAD grid-template-columns: repeat(3, 1fr);
-        =======grid-template-columns: repeat(2, 1fr);
+        (empty) grid-template-columns: repeat(3, 1fr);
+        (empty)grid-template-columns: repeat(2, 1fr);
         (leave empty) gap: 32px;
     }
 
@@ -898,10 +898,10 @@ button {
     }
 
     .skill-bar-container {
-        <<<<<<< HEAD height: 8px;
+        (empty) height: 8px;
         background: #1e293b;
         border-radius: 8px;
-        =======height: 6px;
+        (empty)height: 6px;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 3px;
         (leave empty) overflow: hidden;
@@ -909,17 +909,17 @@ button {
 
     .skill-bar-fill {
         height: 100%;
-        <<<<<<< HEAD background: linear-gradient(90deg, #00d4ff 0%, #7c3aed 100%);
+        (empty) background: linear-gradient(90deg, #00d4ff 0%, #7c3aed 100%);
         border-radius: 8px;
-        =======background: var(--gradient-primary);
+        (empty)background: var(--gradient-primary);
         border-radius: 3px;
         (leave empty) width: 0;
         transition: width 1.5s cubic-bezier(0.1, 1, 0.1, 1);
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Certifications Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .certifications-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -937,9 +937,9 @@ button {
         box-shadow: var(--card-shadow);
         transition: var(--transition-normal);
         overflow: hidden;
-        <<<<<<< HEAD display: flex;
+        (empty) display: flex;
         flex-direction: column;
-        =======(leave empty)
+        (empty)(leave empty)
     }
 
     .cert-glow {
@@ -1008,7 +1008,7 @@ button {
         color: var(--text-secondary);
     }
 
-    <<<<<<< HEAD .cert-btn {
+    (empty) .cert-btn {
         display: block;
         width: 100%;
         text-align: center;
@@ -1031,11 +1031,11 @@ button {
         box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
     }
 
-    =======(leave empty)
+    (empty)(leave empty)
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Key Projects Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .projects-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1249,9 +1249,9 @@ button {
         gap: 12px;
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Education Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .timeline {
         position: relative;
         max-width: 800px;
@@ -1386,9 +1386,9 @@ button {
         color: var(--text-secondary);
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Strengths Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .strengths-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1446,9 +1446,9 @@ button {
         color: var(--text-secondary);
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Contact Section
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .contact-wrapper {
         display: grid;
         grid-template-columns: 0.9fr 1.1fr;
@@ -1635,9 +1635,9 @@ button {
         }
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Footer
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .footer {
         background: #03050a;
         border-top: 1px solid var(--border-color);
@@ -1688,9 +1688,9 @@ button {
         }
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Scroll Animation Classes (Intersection Observer)
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
     .reveal-fade,
     .reveal-left,
     .reveal-right {
@@ -1715,12 +1715,12 @@ button {
         transform: translate(0) scale(1);
     }
 
-    /* ==========================================
+    /* (empty)(empty)(empty)(empty)(empty)(empty)
    Responsive Design & Media Queries
-   ========================================== */
+   (empty)(empty)(empty)(empty)(empty)(empty) */
 
     @media (max-width: 1024px) {
-        <<<<<<< HEAD .hero-container {
+        (empty) .hero-container {
             flex-direction: column-reverse;
             justify-content: center;
             gap: 40px;
@@ -1740,7 +1740,7 @@ button {
             justify-content: center;
         }
 
-        =======(leave empty) .hero-title {
+        (empty)(leave empty) .hero-title {
             font-size: 3.2rem;
         }
 
@@ -1750,8 +1750,8 @@ button {
         }
 
         .skills-grid {
-            <<<<<<< HEAD grid-template-columns: repeat(2, 1fr);
-            =======grid-template-columns: 1fr;
+            (empty) grid-template-columns: repeat(2, 1fr);
+            (empty)grid-template-columns: 1fr;
             (leave empty) gap: 24px;
         }
 
@@ -1789,11 +1789,11 @@ button {
             min-height: 2.2rem;
         }
 
-        <<<<<<< HEAD .skills-grid {
+        (empty) .skills-grid {
             grid-template-columns: 1fr;
         }
 
-        =======(leave empty)
+        (empty)(leave empty)
 
         /* Mobile Navigation */
         .nav-toggle {
