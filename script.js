@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.lucide.createIcons();
     }
 
-    /* (empty)(empty)(empty)(empty)(empty)(empty)
-       Mobile Navigation Menu
-       (empty)(empty)(empty)(empty)(empty)(empty) */
+    // Mobile Navigation Menu
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -15,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.addEventListener('click', (e) => {
             e.stopPropagation();
             navMenu.classList.toggle('open');
-            // Toggle icon menu / close
             const icon = navToggle.querySelector('i');
             if (icon) {
                 if (navMenu.classList.contains('open')) {
@@ -27,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
                 navMenu.classList.remove('open');
@@ -39,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking links
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
@@ -52,16 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* (empty)(empty)(empty)(empty)(empty)(empty)
-       Sticky Header and Active Nav Highlights
-       (empty)(empty)(empty)(empty)(empty)(empty) */
+    // Sticky Header and Active Nav Highlights
     const header = document.querySelector('.header');
     const sections = document.querySelectorAll('section');
 
     const handleScroll = () => {
         const scrollPos = window.scrollY;
-
-        // Sticky Header effect
         if (scrollPos > 50) {
             header.classList.add('scrolled');
         } else {
@@ -70,12 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Trigger on load
+    handleScroll();
 
-    // High-performance IntersectionObserver Scroll-Spy
     const spyOptions = {
         root: null,
-        rootMargin: '-25% 0px -55% 0px', // Triggers when section is in the middle of the viewport
+        rootMargin: '-25% 0px -55% 0px',
         threshold: 0
     };
 
@@ -97,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         spyObserver.observe(section);
     });
 
-    // Special scroll spy fallback for top (home) and bottom (contact)
     window.addEventListener('scroll', () => {
         const scrollPos = window.scrollY;
         if (scrollPos < 100) {
@@ -117,9 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* (empty)(empty)(empty)(empty)(empty)(empty)
-       Typing Animation
-       (empty)(empty)(empty)(empty)(empty)(empty) */
+    // Typing Animation
     const typingTextEl = document.getElementById('typing-text');
     if (typingTextEl) {
         const phrases = [
@@ -139,33 +126,29 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isDeleting) {
                 typingTextEl.textContent = currentPhrase.substring(0, charIdx - 1);
                 charIdx--;
-                typeSpeed = 50; // Faster deleting speed
+                typeSpeed = 50;
             } else {
                 typingTextEl.textContent = currentPhrase.substring(0, charIdx + 1);
                 charIdx++;
-                typeSpeed = 120; // Natural typing speed
+                typeSpeed = 120;
             }
 
             if (!isDeleting && charIdx === currentPhrase.length) {
-                // Pause at complete phrase
                 typeSpeed = 2000;
                 isDeleting = true;
             } else if (isDeleting && charIdx === 0) {
                 isDeleting = false;
                 phraseIdx = (phraseIdx + 1) % phrases.length;
-                typeSpeed = 500; // Pause before typing next phrase
+                typeSpeed = 500;
             }
 
             setTimeout(type, typeSpeed);
         }
 
-        // Start the typing loop
         setTimeout(type, 1000);
     }
 
-    /* (empty)(empty)(empty)(empty)(empty)(empty)
-       Neural Network / Particle Canvas
-       (empty)(empty)(empty)(empty)(empty)(empty) */
+    // Neural Network / Particle Canvas
     const canvas = document.getElementById('particle-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
@@ -186,8 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.baseX = this.x;
                 this.baseY = this.y;
                 this.density = (Math.random() * 30) + 10;
-
-                // Motion parameters
                 this.vx = (Math.random() - 0.5) * 0.7;
                 this.vy = (Math.random() - 0.5) * 0.7;
             }
@@ -201,14 +182,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             update() {
-                // Smooth boundary check bounce
                 if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
                 if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
 
                 this.x += this.vx;
                 this.y += this.vy;
 
-                // Mouse interaction (push/pull effect)
                 if (mouse.x !== null && mouse.y !== null) {
                     let dx = mouse.x - this.x;
                     let dy = mouse.y - this.y;
@@ -218,8 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         let force = (mouse.radius - distance) / mouse.radius;
                         let directionX = dx / distance;
                         let directionY = dy / distance;
-
-                        // Push away slightly
                         this.x -= directionX * force * 1.5;
                         this.y -= directionY * force * 1.5;
                     }
@@ -229,9 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const initParticles = () => {
             particles = [];
-            // Determine density of nodes based on window size
             const count = Math.floor((canvas.width * canvas.height) / 11000);
-            const cappedCount = Math.min(count, 120); // Prevent performance drop on 4k screens
+            const cappedCount = Math.min(count, 120);
 
             for (let i = 0; i < cappedCount; i++) {
                 let x = Math.random() * canvas.width;
@@ -249,11 +225,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     let distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < maxDistance) {
-                        // Fade lines out based on distance
                         let opacity = 1 - (distance / maxDistance);
-                        ctx.strokeStyle = `rgba(157, 78, 221, ${opacity * 0.15})`; // Secondary (purple) lines
+                        ctx.strokeStyle = `rgba(157, 78, 221, ${opacity * 0.15})`;
 
-                        // Make electric blue nodes pop with blue connections sometimes
                         if (distance < 60) {
                             ctx.strokeStyle = `rgba(0, 242, 254, ${opacity * 0.25})`;
                         }
@@ -270,25 +244,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw connections first
             connectParticles();
-
-            // Then draw particles
             for (let i = 0; i < particles.length; i++) {
                 particles[i].update();
                 particles[i].draw();
             }
-
             requestAnimationFrame(animate);
         };
 
-        // Window resize hook
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
         animate();
 
-        // Mouse listeners for interaction
         window.addEventListener('mousemove', (e) => {
             mouse.x = e.x;
             mouse.y = e.y;
@@ -300,9 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* (empty)(empty)(empty)(empty)(empty)(empty)
-       Scroll Reveal Animation (Intersection Observer)
-       (empty)(empty)(empty)(empty)(empty)(empty) */
+    // Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal-fade, .reveal-left, .reveal-right');
 
     if (revealElements.length > 0) {
@@ -311,18 +276,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('reveal-active');
 
-                    // Trigger skill bar animation if this is the skills section
                     if (entry.target.id === 'skills' || entry.target.closest('#skills')) {
                         animateSkillBars();
                     }
 
-                    // Once animated, no need to monitor it anymore
                     observer.unobserve(entry.target);
                 }
             });
         }, {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px' // Trigger slightly before element is fully in view
+            rootMargin: '0px 0px -50px 0px'
         });
 
         revealElements.forEach(el => {
@@ -330,55 +293,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Animate Skill Bars — FIXED (removed duplicate variable)
     function animateSkillBars() {
         const skillFills = document.querySelectorAll('.skill-bar-fill');
         skillFills.forEach(fill => {
-            (empty)
             const targetWidth = fill.getAttribute('data-width') || fill.style.width;
-            (empty)
-            // Retrigger transition by reapplying width
-            const targetWidth = fill.style.width;
-            (leave empty)
-        fill.style.width = '0';
-        setTimeout(() => {
-            fill.style.width = targetWidth;
-        }, 100);
-    });
+            fill.style.width = '0';
+            setTimeout(() => {
+                fill.style.width = targetWidth;
+            }, 100);
+        });
     }
 
-/* (empty)(empty)(empty)(empty)(empty)(empty)
-   Contact Form Handling
-   (empty)(empty)(empty)(empty)(empty)(empty) */
-const contactForm = document.getElementById('contact-form');
-const formFeedback = document.getElementById('form-feedback');
-const resetFormBtn = document.getElementById('reset-form-btn');
+    // Contact Form Handling
+    const contactForm = document.getElementById('contact-form');
+    const formFeedback = document.getElementById('form-feedback');
+    const resetFormBtn = document.getElementById('reset-form-btn');
 
-if (contactForm && formFeedback) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    if (contactForm && formFeedback) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-        // Simulate form submission status change
-        // Get values (for debugging or future logging)
-        const nameVal = document.getElementById('name').value;
-        const emailVal = document.getElementById('email').value;
-        const messageVal = document.getElementById('message').value;
+            const nameVal = document.getElementById('name').value;
+            const emailVal = document.getElementById('email').value;
+            const messageVal = document.getElementById('message').value;
 
-        console.log("Form Submitted:", { name: nameVal, email: emailVal, message: messageVal });
+            console.log("Form Submitted:", { name: nameVal, email: emailVal, message: messageVal });
 
-        // Hide the form and show the success feedback
-        contactForm.classList.add('hidden');
-        formFeedback.classList.remove('hidden');
-    });
-}
+            contactForm.classList.add('hidden');
+            formFeedback.classList.remove('hidden');
+        });
+    }
 
-if (resetFormBtn && contactForm && formFeedback) {
-    resetFormBtn.addEventListener('click', () => {
-        // Clear inputs
-        contactForm.reset();
-
-        // Show the form and hide the feedback card
-        formFeedback.classList.add('hidden');
-        contactForm.classList.remove('hidden');
-    });
-}
+    if (resetFormBtn && contactForm && formFeedback) {
+        resetFormBtn.addEventListener('click', () => {
+            contactForm.reset();
+            formFeedback.classList.add('hidden');
+            contactForm.classList.remove('hidden');
+        });
+    }
 });
